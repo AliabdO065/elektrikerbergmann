@@ -143,5 +143,22 @@
     "Frage gelöscht.": "Question deleted.",
     "Anfrage gelöscht.": "Request deleted.",
     "Soziale Netzwerke": "Social media",
-    "Nur ausgefüllte Links werden im Footer der Website angezeigt.": "Only filled-in links are shown in the website footer."
+    "Nur ausgefüllte Links werden im Footer der Website angezeigt.": "Only filled-in links are shown in the website footer.",
+    "Anzahl Bewertungen": "Number of reviews",
+    "Trust-Punkte": "Trust points",
+    "Rechtliche Links": "Legal links",
+    "Abschnitts-Überschriften": "Section headings",
+    "Badge-Text (über der Überschrift)": "Badge text (above the headline)",
+    "Kicker (kleiner Text über der Überschrift)": "Kicker (small text above the headline)",
+    "Die kleinen Kicker-Texte und Überschriften über jedem Abschnitt der Website.": "The small kicker texts and headings above each section of the website.",
+    "Kicker": "Kicker",
+    "Untertext": "Subtext",
+    "Abschnitts-Überschrift": "Section heading",
+    "Button-Text (zweiter Button)": "Button text (second button)",
+    "Navbar": "Navbar",
+    "Name neben dem Logo anzeigen": "Show name next to the logo",
+    "Name in der Navigationsleiste": "Name in the navigation bar",
+    "Footer": "Footer",
+    "Menüpunkte": "Menu items",
+    "Kurzbeschreibung": "Short description"
 }

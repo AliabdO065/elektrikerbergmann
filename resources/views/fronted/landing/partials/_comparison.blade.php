@@ -1,9 +1,9 @@
 <section class="lk-section lk-section-alt" id="lk-comparison">
     <div class="lk-container">
         <div class="lk-section-head">
-            <span class="lk-eyebrow">{{ __('Der Unterschied') }}</span>
-            <h2 class="lk-h2">{{ __('Echter Meisterbetrieb oder Notdienst-Abzocke?') }}</h2>
-            <p>{{ __('Leider gibt es in der Branche schwarze Schafe. So erkennen Sie einen seriösen Betrieb.') }}</p>
+            <span class="lk-eyebrow">{{ $settings->comparison_eyebrow ?? __('Der Unterschied') }}</span>
+            <h2 class="lk-h2">{{ $settings->comparison_heading ?? __('Echter Meisterbetrieb oder Notdienst-Abzocke?') }}</h2>
+            <p>{{ $settings->comparison_subheading ?? __('Leider gibt es in der Branche schwarze Schafe. So erkennen Sie einen seriösen Betrieb.') }}</p>
         </div>
 
         <div class="lk-compare-wrap">
@@ -11,7 +11,7 @@
                 <thead>
                     <tr>
                         <th>{{ __('Kriterium') }}</th>
-                        <th>{{ $settings->company_name ?? 'Elektriker Klostermann' }}</th>
+                        <th>{{ $settings->company_name ?? 'Elektriker Bergmann' }}</th>
                         <th>{{ __('Anonyme Notdienst-Anbieter') }}</th>
                     </tr>
                 </thead>

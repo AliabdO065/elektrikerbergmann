@@ -2,7 +2,7 @@
     <div class="lk-container">
         <div class="lk-hero-grid">
             <div>
-                <span class="lk-hero-badge"><i class="fa-solid fa-medal"></i> {{ __('Meisterbetrieb seit 1993 · 24/7 erreichbar') }}</span>
+                <span class="lk-hero-badge"><i class="fa-solid fa-medal"></i> {{ $settings->hero_badge_text ?? __('Meisterbetrieb seit 1993 · 24/7 erreichbar') }}</span>
                 <h1>{{ $settings->hero_headline ?? __('Elektriker in Ihrer Nähe — in 30 Min. vor Ort') }}</h1>
                 <p class="lead">{{ $settings->hero_subheadline ?? '' }}</p>
                 <div class="lk-hero-ctas">
@@ -10,7 +10,7 @@
                         <i class="fa-solid fa-phone"></i> {{ $settings->hero_cta_label ?? __('Jetzt anrufen') }}
                     </a>
                     <a href="#lk-callback" class="lk-btn lk-btn-outline-light">
-                        {{ __('Rückruf anfordern') }}
+                        {{ $settings->hero_secondary_cta_label ?? __('Rückruf anfordern') }}
                     </a>
                 </div>
             </div>

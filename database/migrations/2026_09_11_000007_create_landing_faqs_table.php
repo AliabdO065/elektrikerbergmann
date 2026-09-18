@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('landing_faqs', function (Blueprint $table) {
             $table->id();
-            $table->string('question');
-            $table->text('answer');
+            $table->json('question');
+            $table->json('answer');
             $table->unsignedInteger('sort_order')->default(0);
             $table->timestamps();
         });

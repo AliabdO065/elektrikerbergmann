@@ -1,4 +1,4 @@
-# Elektriker Klostermann — Notdienst Landing Page
+# Elektriker Bergmann — Notdienst Landing Page
 
 A single-page marketing site for a 24/7 emergency electrician business in Cologne, Germany, built on Laravel 9. All content is editable from a custom admin dashboard — no code changes needed to update text, images, prices, reviews, or FAQs.
 
@@ -53,7 +53,7 @@ This is not the original template. The project started from a generic multi-page
    ```
    SEED_ADMIN_PASSWORD=choose-a-strong-password-here
    ```
-   The seeder creates the admin account `admin@elektriker-klostermann.de` using this value. If it's left empty, no admin user is created and you won't be able to log in.
+   The seeder creates the admin account `admin@elektriker-bergmann.de` using this value. If it's left empty, no admin user is created and you won't be able to log in.
 
 4. **Create the database, then migrate and seed**
    ```bash
@@ -74,7 +74,7 @@ This is not the original template. The project started from a generic multi-page
      php artisan serve
      ```
 
-7. **Log in to the dashboard** at `/login` using `admin@elektriker-klostermann.de` and the password you set in step 3.
+7. **Log in to the dashboard** at `/login` using `admin@elektriker-bergmann.de` and the password you set in step 3.
 
 ## Using the dashboard
 

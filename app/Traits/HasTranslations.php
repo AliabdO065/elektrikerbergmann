@@ -42,7 +42,22 @@ trait HasTranslations
         $all = $this->translationsFor($field);
         $default = config('app.fallback_locale', 'de');
 
-        return $all[$locale] ?? $all[$default] ?? (reset($all) ?: null);
+        // An empty string means "not translated yet" (e.g. an optional language
+        // tab left blank on an add/edit form), not "translated to nothing" — so
+        // it must fall through to the next candidate, same as a missing key.
+        foreach ([$locale, $default] as $candidate) {
+            if (($all[$candidate] ?? '') !== '') {
+                return $all[$candidate];
+            }
+        }
+
+        foreach ($all as $value) {
+            if (($value ?? '') !== '') {
+                return $value;
+            }
+        }
+
+        return null;
     }
 
     /**

@@ -14,6 +14,25 @@
             @if (session('success'))
                 <div class="alert alert-success">{{ session('success') }}</div>
             @endif
+
+            <div class="card mb-4">
+                <button class="card-header lk-collapse-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#heading-form-body" aria-expanded="false" aria-controls="heading-form-body">
+                    <span><i class="fa-solid fa-heading"></i> {{ __('Abschnitts-Überschrift') }}</span>
+                    <i class="fa-solid fa-chevron-down lk-collapse-caret"></i>
+                </button>
+                <div class="collapse" id="heading-form-body">
+                    <div class="card-body">
+                        <form action="{{ route('dashboard.landing.settings.update') }}" method="POST">
+                            @csrf
+                            @include('dashboard.landing.partials._translatable-field', ['name'=>'callback_eyebrow', 'label'=>__('Kicker'), 'values'=>$settings->translationsFor('callback_eyebrow'), 'required'=>false])
+                            @include('dashboard.landing.partials._translatable-field', ['name'=>'callback_heading', 'label'=>__('Überschrift'), 'values'=>$settings->translationsFor('callback_heading'), 'required'=>false])
+                            @include('dashboard.landing.partials._translatable-field', ['name'=>'callback_subtext', 'label'=>__('Untertext'), 'values'=>$settings->translationsFor('callback_subtext'), 'required'=>false])
+                            <button type="submit" class="btn btn-primary">{{ __('Speichern') }}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
             <table class="table table-bordered">
                 <thead>
                     <tr>

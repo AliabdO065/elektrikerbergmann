@@ -44,7 +44,7 @@
     <link rel="stylesheet" href="{{asset('dashboard/assets/stylesheets/theme.min.css')}}" data-skin="default">
     <link rel="stylesheet" href="{{asset('dashboard/assets/stylesheets/theme-dark.min.css')}}" data-skin="dark">
     <link rel="stylesheet" href="{{asset('dashboard/assets/stylesheets/custom.css')}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-papRIJ3zRj2lf4y+Kq8S5N1Jr4l3GhptpNn+e9vG6P1mQb4YJp5jR+eyy7q4l2gFy5kQ1+ZLxQWZc6QJ7K6rAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script>
       var skin = localStorage.getItem('skin') || 'default';
@@ -71,8 +71,8 @@
           <div class="top-bar-brand">
             <!-- toggle aside menu -->
             <button class="hamburger hamburger-squeeze mr-2" type="button" data-toggle="aside-menu" aria-label="toggle aside menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button> <!-- /toggle aside menu -->
-            <a href="{{route('dashboard.index')}}" style="font-size: 24px; font-weight: bold; color: #ffffff; text-decoration: none;">
-                Elsscuba
+            <a href="{{route('dashboard.index')}}" style="font-size: 17px; font-weight: bold; color: #ffffff; text-decoration: none; white-space: nowrap;">
+                Elektriker Bergmann
             </a>
           </div><!-- /.top-bar-brand -->
           <!-- .top-bar-list -->

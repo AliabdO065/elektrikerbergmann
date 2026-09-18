@@ -14,7 +14,7 @@ return new class extends Migration
             $table->string('author_photo')->nullable();
             $table->unsignedTinyInteger('rating')->default(5);
             $table->date('review_date')->nullable();
-            $table->text('review_text');
+            $table->json('review_text');
             $table->boolean('is_placeholder')->default(true);
             $table->unsignedInteger('sort_order')->default(0);
             $table->timestamps();

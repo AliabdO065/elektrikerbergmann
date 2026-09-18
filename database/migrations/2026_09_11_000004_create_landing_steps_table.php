@@ -11,8 +11,8 @@ return new class extends Migration
         Schema::create('landing_steps', function (Blueprint $table) {
             $table->id();
             $table->unsignedTinyInteger('step_number')->default(1);
-            $table->string('title');
-            $table->text('description')->nullable();
+            $table->json('title');
+            $table->json('description')->nullable();
             $table->string('image')->nullable();
             $table->unsignedInteger('sort_order')->default(0);
             $table->timestamps();

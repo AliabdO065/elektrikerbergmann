@@ -2,8 +2,8 @@
     <div class="lk-container">
         <div class="lk-footer-grid">
             <div>
-                <h4>{{ $settings->company_name ?? 'Elektriker Klostermann' }}</h4>
-                <p style="max-width:320px;">{{ __('Elektro-Notdienst in Köln und Umgebung — Meisterbetrieb seit 1993.') }}</p>
+                <h4>{{ $settings->company_name ?? 'Elektriker Bergmann' }}</h4>
+                <p style="max-width:320px;">{{ $settings->footer_description ?? __('Elektro-Notdienst in Köln und Umgebung — Meisterbetrieb seit 1993.') }}</p>
                 @if($settings->certifications_text ?? null)
                     <p style="font-size:.85rem;">{{ $settings->certifications_text }}</p>
                 @endif
@@ -51,7 +51,7 @@
         </div>
 
         <div class="lk-footer-bottom">
-            <span>&copy; {{ date('Y') }} {{ $settings->company_name ?? 'Elektriker Klostermann' }}</span>
+            <span>&copy; {{ date('Y') }} {{ $settings->company_name ?? 'Elektriker Bergmann' }}</span>
             <span>{{ __('Alle Rechte vorbehalten') }}</span>
         </div>
     </div>

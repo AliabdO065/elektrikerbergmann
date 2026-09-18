@@ -49,6 +49,8 @@ Route::get('/lang/{code}', function (string $code) {
     Route::get('/landing/settings', [LandingDashboardController::class,'settings'])->name('landing.settings');
     Route::post('/landing/settings/update', [LandingDashboardController::class,'updateSettings'])->name('landing.settings.update');
 
+    Route::get('/landing/about', [LandingDashboardController::class,'about'])->name('landing.about');
+
     Route::get('/landing/stats', [LandingDashboardController::class,'stats'])->name('landing.stats');
     Route::get('/landing/stats/add', [LandingDashboardController::class,'addStat'])->name('landing.stats.add');
     Route::post('/landing/stats/store', [LandingDashboardController::class,'storeStat'])->name('landing.stats.store');

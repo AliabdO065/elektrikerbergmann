@@ -6,6 +6,25 @@
             @if (session('success'))
                 <div class="alert alert-success">{{ session('success') }}</div>
             @endif
+
+            <div class="card mb-4">
+                <button class="card-header lk-collapse-toggle collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#heading-form-body" aria-expanded="false" aria-controls="heading-form-body">
+                    <span><i class="fa-solid fa-heading"></i> {{ __('Abschnitts-Überschrift') }}</span>
+                    <i class="fa-solid fa-chevron-down lk-collapse-caret"></i>
+                </button>
+                <div class="collapse" id="heading-form-body">
+                    <div class="card-body">
+                        <form action="{{ route('dashboard.landing.settings.update') }}" method="POST">
+                            @csrf
+                            @include('dashboard.landing.partials._translatable-field', ['name'=>'comparison_eyebrow', 'label'=>__('Kicker'), 'values'=>$settings->translationsFor('comparison_eyebrow'), 'required'=>false])
+                            @include('dashboard.landing.partials._translatable-field', ['name'=>'comparison_heading', 'label'=>__('Überschrift'), 'values'=>$settings->translationsFor('comparison_heading'), 'required'=>false])
+                            @include('dashboard.landing.partials._translatable-field', ['name'=>'comparison_subheading', 'label'=>__('Untertext'), 'values'=>$settings->translationsFor('comparison_subheading'), 'required'=>false])
+                            <button type="submit" class="btn btn-primary">{{ __('Speichern') }}</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
             <a href="{{ route('dashboard.landing.comparisons.add') }}" class="btn btn-success">{{ __('Zeile hinzufügen') }}</a>
             <hr>
             <table class="table table-bordered">

@@ -10,8 +10,8 @@ return new class extends Migration
     {
         Schema::create('landing_services', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('description')->nullable();
+            $table->json('title');
+            $table->json('description')->nullable();
             $table->string('icon')->nullable();
             $table->string('image')->nullable();
             $table->unsignedInteger('sort_order')->default(0);

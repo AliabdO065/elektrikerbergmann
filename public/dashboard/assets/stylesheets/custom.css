@@ -83,3 +83,53 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
   letter-spacing: .02em;
   padding: 0.35em 0.7em;
 }
+
+/* Settings page: section cards, so long forms with many headings stay
+   scannable and each heading visually stays with its fields. */
+html {
+  scroll-behavior: smooth;
+}
+.card {
+  scroll-margin-top: 70px;
+}
+.card > .card-header {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.lk-settings-subhead {
+  margin-top: 24px;
+  margin-bottom: 12px;
+  padding-top: 16px;
+  border-top: 1px dashed #dde3ec;
+  color: #6c7a91;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: .05em;
+}
+.lk-settings-save {
+  position: sticky;
+  bottom: 16px;
+}
+
+/* Collapsible "section heading" card (closed by default) on the
+   Services/Steps/Comparisons/Reviews/FAQs/Leads pages. */
+button.card-header.lk-collapse-toggle {
+  width: 100%;
+  border: 0;
+  background: transparent;
+  text-align: inherit;
+  justify-content: space-between;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  color: inherit;
+  font: inherit;
+}
+.lk-collapse-toggle .lk-collapse-caret {
+  transition: transform .2s ease;
+}
+.lk-collapse-toggle:not(.collapsed) .lk-collapse-caret {
+  transform: rotate(180deg);
+}

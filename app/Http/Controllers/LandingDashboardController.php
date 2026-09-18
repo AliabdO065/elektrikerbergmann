@@ -88,27 +88,50 @@ class LandingDashboardController extends Controller
         return view('dashboard.landing.settings.index', compact('settings'));
     }
 
+    public function about()
+    {
+        $settings = LandingSetting::firstOrCreate([]);
+
+        return view('dashboard.landing.about.index', compact('settings'));
+    }
+
     public function updateSettings(Request $request)
     {
+        // These fields only live on the main Settings form; other pages (Services,
+        // Steps, ...) post just their own section-heading fields via this same
+        // route, so only validate ones actually present in the request.
         $request->validate([
-            'phone_display' => 'required|string|max:255',
-            'phone_href' => 'required|string|max:255',
-            'hero_headline.de' => 'required|string|max:255',
-            'company_name.de' => 'required|string|max:255',
+            'phone_display' => 'sometimes|required|string|max:255',
+            'phone_href' => 'sometimes|required|string|max:255',
+            'hero_headline.de' => 'sometimes|required|string|max:255',
+            'company_name.de' => 'sometimes|required|string|max:255',
         ]);
 
         $settings = LandingSetting::firstOrCreate([]);
 
         $data = $request->except(['_token', 'logo_image_file', 'hero_image_file', 'about_owner_photo_file']);
 
+        // handleUpload() is self-guarding (it only acts when a file was actually
+        // sent), so these can run unconditionally regardless of which page's
+        // mini-form submitted this request.
         $data['logo_image'] = $this->handleUpload($request, 'logo_image_file', $settings->logo_image, 'settings');
         $data['hero_image'] = $this->handleUpload($request, 'hero_image_file', $settings->hero_image, 'settings');
         $data['about_owner_photo'] = $this->handleUpload($request, 'about_owner_photo_file', $settings->about_owner_photo, 'settings');
-        $data['alert_banner_active'] = $request->has('alert_banner_active');
+
+        // Checkboxes are ambiguous when absent (unchecked vs. "this form doesn't
+        // render this field at all"), so only the main Settings page's own
+        // checkboxes get touched, guarded by a field only that page submits.
+        if ($request->has('phone_display')) {
+            $data['alert_banner_active'] = $request->has('alert_banner_active');
+            $data['navbar_show_brand_text'] = $request->has('navbar_show_brand_text');
+            foreach (['nav_show_services', 'nav_show_steps', 'nav_show_about', 'nav_show_comparison', 'nav_show_reviews', 'nav_show_faq', 'nav_show_callback'] as $navField) {
+                $data[$navField] = $request->has($navField);
+            }
+        }
 
         $settings->update($data);
 
-        return redirect()->route('dashboard.landing.settings')->with('success', __('Einstellungen gespeichert.'));
+        return redirect()->back()->with('success', __('Einstellungen gespeichert.'));
     }
 
     // ----- Stats (repeatable, no images) -----
@@ -116,8 +139,9 @@ class LandingDashboardController extends Controller
     public function stats()
     {
         $items = LandingStat::orderBy('sort_order')->get();
+        $settings = LandingSetting::firstOrCreate([]);
 
-        return view('dashboard.landing.stats.all', compact('items'));
+        return view('dashboard.landing.stats.all', compact('items', 'settings'));
     }
 
     public function addStat()
@@ -176,8 +200,9 @@ class LandingDashboardController extends Controller
     public function services()
     {
         $items = LandingService::orderBy('sort_order')->get();
+        $settings = LandingSetting::firstOrCreate([]);
 
-        return view('dashboard.landing.services.all', compact('items'));
+        return view('dashboard.landing.services.all', compact('items', 'settings'));
     }
 
     public function addService()
@@ -248,8 +273,9 @@ class LandingDashboardController extends Controller
     public function steps()
     {
         $items = LandingStep::orderBy('sort_order')->get();
+        $settings = LandingSetting::firstOrCreate([]);
 
-        return view('dashboard.landing.steps.all', compact('items'));
+        return view('dashboard.landing.steps.all', compact('items', 'settings'));
     }
 
     public function addStep()
@@ -318,8 +344,9 @@ class LandingDashboardController extends Controller
     public function comparisons()
     {
         $items = LandingComparison::orderBy('sort_order')->get();
+        $settings = LandingSetting::firstOrCreate([]);
 
-        return view('dashboard.landing.comparisons.all', compact('items'));
+        return view('dashboard.landing.comparisons.all', compact('items', 'settings'));
     }
 
     public function addComparison()
@@ -390,8 +417,9 @@ class LandingDashboardController extends Controller
     public function reviews()
     {
         $items = LandingReview::orderBy('sort_order')->get();
+        $settings = LandingSetting::firstOrCreate([]);
 
-        return view('dashboard.landing.reviews.all', compact('items'));
+        return view('dashboard.landing.reviews.all', compact('items', 'settings'));
     }
 
     public function addReview()
@@ -460,8 +488,9 @@ class LandingDashboardController extends Controller
     public function faqs()
     {
         $items = LandingFaq::orderBy('sort_order')->get();
+        $settings = LandingSetting::firstOrCreate([]);
 
-        return view('dashboard.landing.faqs.all', compact('items'));
+        return view('dashboard.landing.faqs.all', compact('items', 'settings'));
     }
 
     public function addFaq()
@@ -522,8 +551,9 @@ class LandingDashboardController extends Controller
     public function leads()
     {
         $items = LandingLead::latest()->paginate(20);
+        $settings = LandingSetting::firstOrCreate([]);
 
-        return view('dashboard.landing.leads.index', compact('items'));
+        return view('dashboard.landing.leads.index', compact('items', 'settings'));
     }
 
     public function deleteLead($id)

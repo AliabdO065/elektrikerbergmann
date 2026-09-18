@@ -6,17 +6,33 @@
             @else
                 <span class="lk-logo-mark"><i class="fa-solid fa-bolt"></i></span>
             @endif
-            {{ $settings->company_name ?? 'Elektriker Klostermann' }}
+            @if($settings->navbar_show_brand_text ?? true)
+                {{ $settings->navbar_brand_text ?? $settings->company_name ?? 'Elektriker Bergmann' }}
+            @endif
         </a>
 
         <ul class="lk-nav-links">
-            <li><a href="#lk-services">{{ __('Leistungen') }}</a></li>
-            <li><a href="#lk-steps">{{ __('Ablauf') }}</a></li>
-            <li><a href="#lk-about">{{ __('Über uns') }}</a></li>
-            <li><a href="#lk-comparison">{{ __('Vergleich') }}</a></li>
-            <li><a href="#lk-reviews">{{ __('Bewertungen') }}</a></li>
-            <li><a href="#lk-faq">{{ __('FAQ') }}</a></li>
-            <li><a href="#lk-callback">{{ __('Kontakt') }}</a></li>
+            @if($settings->nav_show_services ?? true)
+                <li><a href="#lk-services">{{ __('Leistungen') }}</a></li>
+            @endif
+            @if($settings->nav_show_steps ?? true)
+                <li><a href="#lk-steps">{{ __('Ablauf') }}</a></li>
+            @endif
+            @if($settings->nav_show_about ?? true)
+                <li><a href="#lk-about">{{ __('Über uns') }}</a></li>
+            @endif
+            @if($settings->nav_show_comparison ?? true)
+                <li><a href="#lk-comparison">{{ __('Vergleich') }}</a></li>
+            @endif
+            @if($settings->nav_show_reviews ?? true)
+                <li><a href="#lk-reviews">{{ __('Bewertungen') }}</a></li>
+            @endif
+            @if($settings->nav_show_faq ?? true)
+                <li><a href="#lk-faq">{{ __('FAQ') }}</a></li>
+            @endif
+            @if($settings->nav_show_callback ?? true)
+                <li><a href="#lk-callback">{{ __('Kontakt') }}</a></li>
+            @endif
         </ul>
 
         <div class="lk-navbar-actions">

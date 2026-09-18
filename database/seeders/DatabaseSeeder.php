@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
 
         if (env('SEED_ADMIN_PASSWORD')) {
             User::updateOrCreate(
-                ['email' => 'admin@elektriker-klostermann.de'],
-                ['name' => 'Admin', 'password' => Hash::make(env('SEED_ADMIN_PASSWORD'))]
+                ['email' => 'admin@elektriker-bergmann.de'],
+                ['name' => 'Jörg Bergmann', 'password' => Hash::make(env('SEED_ADMIN_PASSWORD'))]
             );
         }
 

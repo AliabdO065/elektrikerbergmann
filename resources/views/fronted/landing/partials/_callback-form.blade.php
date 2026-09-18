@@ -1,9 +1,9 @@
 <section class="lk-section" id="lk-callback">
     <div class="lk-container">
         <div class="lk-section-head">
-            <span class="lk-eyebrow">{{ __('Kein Notfall, aber Beratungsbedarf?') }}</span>
-            <h2 class="lk-h2">{{ __('Rückruf anfordern') }}</h2>
-            <p>{{ __('Sagen Sie uns kurz, worum es geht — wir rufen Sie zeitnah zurück.') }}</p>
+            <span class="lk-eyebrow">{{ $settings->callback_eyebrow ?? __('Kein Notfall, aber Beratungsbedarf?') }}</span>
+            <h2 class="lk-h2">{{ $settings->callback_heading ?? __('Rückruf anfordern') }}</h2>
+            <p>{{ $settings->callback_subtext ?? __('Sagen Sie uns kurz, worum es geht — wir rufen Sie zeitnah zurück.') }}</p>
         </div>
 
         <div class="lk-callback-box">

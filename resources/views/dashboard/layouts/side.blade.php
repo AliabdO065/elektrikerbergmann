@@ -17,22 +17,23 @@
         <div class="aside-menu overflow-hidden">
             <nav id="stacked-menu" class="stacked-menu">
                 <ul class="menu">
-                    <li class="menu-item has-active">
+                    <li class="menu-item @if(request()->routeIs('dashboard.index')) has-active @endif">
                         <a href="{{ route('dashboard.index') }}" class="menu-link">
                             <span class="menu-icon oi oi-dashboard"></span>
                             <span class="menu-text">{{ __('Dashboard') }}</span>
                         </a>
                     </li>
 
-                    <li class="menu-item"><a href="{{ route('dashboard.landing.languages') }}" class="menu-link"><span class="menu-icon oi oi-globe"></span><span class="menu-text">{{ __('Languages') }}</span></a></li>
-                    <li class="menu-item"><a href="{{ route('dashboard.landing.settings') }}" class="menu-link"><span class="menu-icon oi oi-cog"></span><span class="menu-text">{{ __('Settings') }}</span></a></li>
-                    <li class="menu-item"><a href="{{ route('dashboard.landing.stats') }}" class="menu-link"><span class="menu-icon oi oi-graph"></span><span class="menu-text">{{ __('Trust Stats') }}</span></a></li>
-                    <li class="menu-item"><a href="{{ route('dashboard.landing.services') }}" class="menu-link"><span class="menu-icon oi oi-layers"></span><span class="menu-text">{{ __('Services') }}</span></a></li>
-                    <li class="menu-item"><a href="{{ route('dashboard.landing.steps') }}" class="menu-link"><span class="menu-icon oi oi-list-rich"></span><span class="menu-text">{{ __('3-Step Process') }}</span></a></li>
-                    <li class="menu-item"><a href="{{ route('dashboard.landing.comparisons') }}" class="menu-link"><span class="menu-icon oi oi-grid-two-up"></span><span class="menu-text">{{ __('Comparison Table') }}</span></a></li>
-                    <li class="menu-item"><a href="{{ route('dashboard.landing.reviews') }}" class="menu-link"><span class="menu-icon oi oi-star"></span><span class="menu-text">{{ __('Reviews') }}</span></a></li>
-                    <li class="menu-item"><a href="{{ route('dashboard.landing.faqs') }}" class="menu-link"><span class="menu-icon oi oi-question-mark"></span><span class="menu-text">{{ __('FAQ') }}</span></a></li>
-                    <li class="menu-item"><a href="{{ route('dashboard.landing.leads') }}" class="menu-link"><span class="menu-icon oi oi-phone"></span><span class="menu-text">{{ __('Callback Leads') }}</span></a></li>
+                    <li class="menu-item @if(request()->routeIs('dashboard.landing.languages*')) has-active @endif"><a href="{{ route('dashboard.landing.languages') }}" class="menu-link"><span class="menu-icon oi oi-globe"></span><span class="menu-text">{{ __('Languages') }}</span></a></li>
+                    <li class="menu-item @if(request()->routeIs('dashboard.landing.settings*')) has-active @endif"><a href="{{ route('dashboard.landing.settings') }}" class="menu-link"><span class="menu-icon oi oi-cog"></span><span class="menu-text">{{ __('Settings') }}</span></a></li>
+                    <li class="menu-item @if(request()->routeIs('dashboard.landing.about*')) has-active @endif"><a href="{{ route('dashboard.landing.about') }}" class="menu-link"><span class="menu-icon oi oi-person"></span><span class="menu-text">{{ __('About Us') }}</span></a></li>
+                    <li class="menu-item @if(request()->routeIs('dashboard.landing.stats*')) has-active @endif"><a href="{{ route('dashboard.landing.stats') }}" class="menu-link"><span class="menu-icon oi oi-graph"></span><span class="menu-text">{{ __('Trust Stats') }}</span></a></li>
+                    <li class="menu-item @if(request()->routeIs('dashboard.landing.services*')) has-active @endif"><a href="{{ route('dashboard.landing.services') }}" class="menu-link"><span class="menu-icon oi oi-layers"></span><span class="menu-text">{{ __('Services') }}</span></a></li>
+                    <li class="menu-item @if(request()->routeIs('dashboard.landing.steps*')) has-active @endif"><a href="{{ route('dashboard.landing.steps') }}" class="menu-link"><span class="menu-icon oi oi-list-rich"></span><span class="menu-text">{{ __('3-Step Process') }}</span></a></li>
+                    <li class="menu-item @if(request()->routeIs('dashboard.landing.comparisons*')) has-active @endif"><a href="{{ route('dashboard.landing.comparisons') }}" class="menu-link"><span class="menu-icon oi oi-grid-two-up"></span><span class="menu-text">{{ __('Comparison Table') }}</span></a></li>
+                    <li class="menu-item @if(request()->routeIs('dashboard.landing.reviews*')) has-active @endif"><a href="{{ route('dashboard.landing.reviews') }}" class="menu-link"><span class="menu-icon oi oi-star"></span><span class="menu-text">{{ __('Reviews') }}</span></a></li>
+                    <li class="menu-item @if(request()->routeIs('dashboard.landing.faqs*')) has-active @endif"><a href="{{ route('dashboard.landing.faqs') }}" class="menu-link"><span class="menu-icon oi oi-question-mark"></span><span class="menu-text">{{ __('FAQ') }}</span></a></li>
+                    <li class="menu-item @if(request()->routeIs('dashboard.landing.leads*')) has-active @endif"><a href="{{ route('dashboard.landing.leads') }}" class="menu-link"><span class="menu-icon oi oi-phone"></span><span class="menu-text">{{ __('Callback Leads') }}</span></a></li>
 
                     <hr style="border:0; height:4px; background:#333; margin:15px 0; border-radius:2px;">
 

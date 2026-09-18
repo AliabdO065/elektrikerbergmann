@@ -1,8 +1,8 @@
 <section class="lk-section" id="lk-reviews">
     <div class="lk-container">
         <div class="lk-section-head">
-            <span class="lk-eyebrow">{{ __('Kundenstimmen') }}</span>
-            <h2 class="lk-h2">{{ __('Was unsere Kunden sagen') }}</h2>
+            <span class="lk-eyebrow">{{ $settings->reviews_eyebrow ?? __('Kundenstimmen') }}</span>
+            <h2 class="lk-h2">{{ $settings->reviews_heading ?? __('Was unsere Kunden sagen') }}</h2>
         </div>
 
         <div class="lk-reviews-grid">

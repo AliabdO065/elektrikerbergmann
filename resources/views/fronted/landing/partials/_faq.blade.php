@@ -1,8 +1,8 @@
 <section class="lk-section lk-section-alt" id="lk-faq">
     <div class="lk-container" style="max-width:760px;">
         <div class="lk-section-head">
-            <span class="lk-eyebrow">{{ __('Häufige Fragen') }}</span>
-            <h2 class="lk-h2">{{ __('Gut zu wissen') }}</h2>
+            <span class="lk-eyebrow">{{ $settings->faq_eyebrow ?? __('Häufige Fragen') }}</span>
+            <h2 class="lk-h2">{{ $settings->faq_heading ?? __('Gut zu wissen') }}</h2>
         </div>
 
         <div class="lk-faq-list">

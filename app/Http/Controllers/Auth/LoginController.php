@@ -50,7 +50,7 @@ public function logout(Request $request)
 
     $request->session()->regenerateToken();
 
-    return redirect('/home');
+    return redirect()->route('login');
 }
 
 

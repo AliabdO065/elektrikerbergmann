@@ -11,7 +11,7 @@ return new class extends Migration
         Schema::create('landing_stats', function (Blueprint $table) {
             $table->id();
             $table->string('value');
-            $table->string('label');
+            $table->json('label');
             $table->string('icon')->nullable();
             $table->unsignedInteger('sort_order')->default(0);
             $table->timestamps();

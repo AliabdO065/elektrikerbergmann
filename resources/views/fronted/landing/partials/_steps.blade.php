@@ -1,8 +1,8 @@
 <section class="lk-section lk-section-alt" id="lk-steps">
     <div class="lk-container">
         <div class="lk-section-head">
-            <span class="lk-eyebrow">{{ __("So einfach geht's") }}</span>
-            <h2 class="lk-h2">{{ __('In 3 Schritten wieder sicher mit Strom versorgt') }}</h2>
+            <span class="lk-eyebrow">{{ $settings->steps_eyebrow ?? __("So einfach geht's") }}</span>
+            <h2 class="lk-h2">{{ $settings->steps_heading ?? __('In 3 Schritten wieder sicher mit Strom versorgt') }}</h2>
         </div>
 
         <div class="lk-steps">

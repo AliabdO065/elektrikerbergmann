@@ -10,10 +10,10 @@ return new class extends Migration
     {
         Schema::create('landing_comparisons', function (Blueprint $table) {
             $table->id();
-            $table->string('criterion');
-            $table->string('us_value');
+            $table->json('criterion');
+            $table->json('us_value');
             $table->boolean('us_is_positive')->default(true);
-            $table->string('them_value');
+            $table->json('them_value');
             $table->boolean('them_is_positive')->default(false);
             $table->unsignedInteger('sort_order')->default(0);
             $table->timestamps();

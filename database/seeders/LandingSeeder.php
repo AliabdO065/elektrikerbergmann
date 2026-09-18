@@ -47,7 +47,7 @@ class LandingSeeder extends Seeder
                 'hero_image' => null,
                 'rating_value' => 4.9,
                 'rating_count' => 512,
-                'about_owner_name' => 'Jürgen Klostermann',
+                'about_owner_name' => 'Jörg Bergmann',
                 'about_owner_photo' => null,
                 'about_story' => $this->t(
                     'Seit 1993 sorgt unser Meisterbetrieb in Köln und Umgebung für sichere Elektroinstallationen. Was als Ein-Mann-Betrieb begann, ist heute ein eingespieltes Team erfahrener Elektromeister und Gesellen — mit demselben Anspruch wie am ersten Tag: ehrliche Beratung, saubere Arbeit, faire Preise.',
@@ -78,17 +78,79 @@ class LandingSeeder extends Seeder
                     'Every job is covered by our business liability insurance up to €5 million.',
                     'كل مهمة مغطاة بتأمين المسؤولية الخاص بشركتنا حتى 5 ملايين يورو.'
                 ),
-                'company_name' => $this->t('Elektriker Klostermann', 'Elektriker Klostermann', 'إلكتريكر كلوسترمان'),
+                'company_name' => $this->t('Elektriker Bergmann', 'Elektriker Bergmann', 'إلكتريكر بيرجمان'),
                 'company_address' => 'Musterstraße 12, 50667 Köln',
-                'company_email' => 'info@elektriker-klostermann.de',
+                'company_email' => 'info@elektriker-bergmann.de',
                 'certifications_text' => $this->t(
                     'Meisterbetrieb der Elektro-Innung Köln · Mitglied der Handwerkskammer Köln',
                     'Master craftsman member of the Cologne Electrical Guild · Member of the Cologne Chamber of Skilled Crafts',
                     'عضو نقابة الكهربائيين المعتمدين في كولونيا · عضو غرفة الحرف اليدوية في كولونيا'
                 ),
+                'footer_description' => $this->t(
+                    'Elektro-Notdienst in Köln und Umgebung — Meisterbetrieb seit 1993.',
+                    'Emergency electrician service in Cologne and the surrounding area — master craftsman business since 1993.',
+                    'خدمة الطوارئ الكهربائية في كولونيا والمناطق المحيطة — شركة حرفية معتمدة منذ عام 1993.'
+                ),
+                'navbar_show_brand_text' => true,
+                'navbar_brand_text' => $this->t('Elektriker Bergmann', 'Elektriker Bergmann', 'إلكتريكر بيرجمان'),
                 'impressum_url' => null,
                 'privacy_url' => null,
                 'terms_url' => null,
+                'hero_badge_text' => $this->t(
+                    'Meisterbetrieb seit 1993 · 24/7 erreichbar',
+                    'Master craftsman business since 1993 · Available 24/7',
+                    'شركة حرفية معتمدة منذ 1993 · متاحون على مدار الساعة'
+                ),
+                'hero_secondary_cta_label' => $this->t('Rückruf anfordern', 'Request a callback', 'اطلب معاودة الاتصال'),
+                'about_eyebrow' => $this->t('Über uns', 'About us', 'من نحن'),
+                'about_heading' => $this->t(
+                    'Ein Meisterbetrieb, dem Köln seit 1993 vertraut',
+                    'A master craftsman business Cologne has trusted since 1993',
+                    'شركة حرفية تثق بها كولونيا منذ عام 1993'
+                ),
+                'services_eyebrow' => $this->t('Unsere Notdienst-Leistungen', 'Our emergency services', 'خدمات الطوارئ لدينا'),
+                'services_heading' => $this->t(
+                    'Egal was passiert ist — wir sind in ca. 30 Minuten da',
+                    "Whatever happened — we're on-site in about 30 minutes",
+                    'مهما حدث — نصل خلال حوالي 30 دقيقة'
+                ),
+                'services_subheading' => $this->t(
+                    'Die drei häufigsten Notfälle, mit denen uns unsere Kunden in Köln erreichen.',
+                    'The three most common emergencies our customers in Cologne call us about.',
+                    'أكثر ثلاث حالات طوارئ يتواصل بها عملاؤنا في كولونيا معنا.'
+                ),
+                'steps_eyebrow' => $this->t("So einfach geht's", "It's this simple", 'بهذه البساطة'),
+                'steps_heading' => $this->t(
+                    'In 3 Schritten wieder sicher mit Strom versorgt',
+                    'Power restored safely in 3 steps',
+                    'استعادة التيار الكهربائي بأمان في 3 خطوات'
+                ),
+                'comparison_eyebrow' => $this->t('Der Unterschied', 'The difference', 'الفرق'),
+                'comparison_heading' => $this->t(
+                    'Echter Meisterbetrieb oder Notdienst-Abzocke?',
+                    'Real master craftsman or emergency-service scam?',
+                    'شركة حرفية حقيقية أم احتيال خدمات طوارئ؟'
+                ),
+                'comparison_subheading' => $this->t(
+                    'Leider gibt es in der Branche schwarze Schafe. So erkennen Sie einen seriösen Betrieb.',
+                    "Unfortunately there are bad actors in this industry. Here's how to spot a trustworthy business.",
+                    'للأسف توجد جهات غير موثوقة في هذا المجال. إليك كيف تتعرف على شركة موثوقة.'
+                ),
+                'reviews_eyebrow' => $this->t('Kundenstimmen', 'Customer voices', 'آراء العملاء'),
+                'reviews_heading' => $this->t('Was unsere Kunden sagen', 'What our customers say', 'ماذا يقول عملاؤنا'),
+                'faq_eyebrow' => $this->t('Häufige Fragen', 'Frequently asked questions', 'الأسئلة الشائعة'),
+                'faq_heading' => $this->t('Gut zu wissen', 'Good to know', 'معلومات مفيدة'),
+                'callback_eyebrow' => $this->t(
+                    'Kein Notfall, aber Beratungsbedarf?',
+                    'Not an emergency, but need advice?',
+                    'ليست حالة طارئة لكن تحتاج استشارة؟'
+                ),
+                'callback_heading' => $this->t('Rückruf anfordern', 'Request a callback', 'اطلب معاودة الاتصال'),
+                'callback_subtext' => $this->t(
+                    'Sagen Sie uns kurz, worum es geht — wir rufen Sie zeitnah zurück.',
+                    "Tell us briefly what's going on — we'll call you back promptly.",
+                    'أخبرنا بإيجاز عن المشكلة — سنعاود الاتصال بك قريبًا.'
+                ),
                 'created_at' => now(),
                 'updated_at' => now(),
             ]);
@@ -227,9 +289,9 @@ class LandingSeeder extends Seeder
                     "Finally a tradesperson who actually calls back when they say they will. Can recommend without reservation.",
                     'أخيرًا حرفي يلتزم بما يقوله. أنصح به بدون تردد.'],
                 ['Andreas P.', 5, '-100 days',
-                    'Sicherung ist ständig rausgeflogen, andere Firma hat es "repariert" und es kam wieder. Klostermann hat die echte Ursache gefunden.',
-                    'The breaker kept tripping, another company "fixed" it and it came back. Klostermann found the real cause.',
-                    'كان القاطع يفصل باستمرار، وقامت شركة أخرى بـ"إصلاحه" لكنه عاد. وجدت كلوسترمان السبب الحقيقي.'],
+                    'Sicherung ist ständig rausgeflogen, andere Firma hat es "repariert" und es kam wieder. Bergmann hat die echte Ursache gefunden.',
+                    'The breaker kept tripping, another company "fixed" it and it came back. Bergmann found the real cause.',
+                    'كان القاطع يفصل باستمرار، وقامت شركة أخرى بـ"إصلاحه" لكنه عاد. وجد بيرجمان السبب الحقيقي.'],
                 ['Nicole S.', 4, '-120 days',
                     'Sehr kompetent und ordentlich gearbeitet. Etwas Wartezeit am Telefon, aber der Termin danach hat alles wieder gutgemacht.',
                     'Very competent and tidy work. A bit of a wait on the phone, but the appointment afterward made up for it.',
