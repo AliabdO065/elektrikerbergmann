@@ -61,10 +61,10 @@ This is not the original template. The project started from a generic multi-page
    ```
    This creates all tables and fills the landing page with placeholder content (stats, services, steps, comparison rows, sample reviews, FAQs) in all 3 languages, ready to be edited from the dashboard.
 
-5. **Build frontend assets** (required on a fresh install — the login page loads its CSS/JS from `public/build`, which isn't committed to git)
+5. **Frontend assets** — the login page loads its CSS/JS from `public/build`, which is committed to git, so no Node is needed on the server. Only rebuild (and commit the result) if you change files under `resources/sass` or `resources/js`:
    ```bash
-   npm run build   # for production
-   npm run dev     # alternative for local development (keeps a watcher running)
+   npm install
+   npm run build   # regenerates public/build
    ```
 
 6. **Serve the app**
