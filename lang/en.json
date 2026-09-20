@@ -160,5 +160,11 @@
     "Name in der Navigationsleiste": "Name in the navigation bar",
     "Footer": "Footer",
     "Menüpunkte": "Menu items",
-    "Kurzbeschreibung": "Short description"
+    "Kurzbeschreibung": "Short description",
+    "Fehler :code": "Error :code",
+    "Seite nicht gefunden": "Page not found",
+    "Die Seite, die Sie suchen, existiert nicht oder wurde verschoben.": "The page you are looking for doesn't exist or has been moved.",
+    "Zur Startseite": "Back to home",
+    "Da ist etwas schiefgelaufen": "Something went wrong",
+    "Bei uns ist ein technischer Fehler aufgetreten. Bitte versuchen Sie es in wenigen Minuten erneut.": "We ran into a technical problem. Please try again in a few minutes."
 }

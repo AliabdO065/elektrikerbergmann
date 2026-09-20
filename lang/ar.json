@@ -192,5 +192,11 @@
     "No feedback ...................": "لا توجد ملاحظات ...................",
     "Header": "العنوان",
     "Phone": "الهاتف",
-    "Edit": "تعديل"
+    "Edit": "تعديل",
+    "Fehler :code": "خطأ :code",
+    "Seite nicht gefunden": "الصفحة غير موجودة",
+    "Die Seite, die Sie suchen, existiert nicht oder wurde verschoben.": "الصفحة التي تبحث عنها غير موجودة أو تم نقلها.",
+    "Zur Startseite": "العودة إلى الصفحة الرئيسية",
+    "Da ist etwas schiefgelaufen": "حدث خطأ ما",
+    "Bei uns ist ein technischer Fehler aufgetreten. Bitte versuchen Sie es in wenigen Minuten erneut.": "واجهنا مشكلة تقنية. يرجى المحاولة مرة أخرى بعد بضع دقائق."
 }
