@@ -3,7 +3,7 @@
         <div class="lk-section-head">
             <span class="lk-eyebrow">{{ $settings->services_eyebrow ?? __('Unsere Notdienst-Leistungen') }}</span>
             <h2 class="lk-h2">{{ $settings->services_heading ?? __('Egal was passiert ist — wir sind in ca. 30 Minuten da') }}</h2>
-            <p>{{ $settings->services_subheading ?? __('Die drei häufigsten Notfälle, mit denen uns unsere Kunden in Köln erreichen.') }}</p>
+            <p>{{ $settings->services_subheading ?? __('Die drei häufigsten Notfälle, mit denen uns unsere Kunden in Berlin erreichen.') }}</p>
         </div>
 
         <div class="lk-cards-3">

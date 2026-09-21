@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $settings->company_name ?? 'Elektriker Bergmann' }} — {{ __('Elektro-Notdienst Köln') }}</title>
-    <meta name="description" content="{{ __('24/7 Elektro-Notdienst in Köln — Meisterbetrieb seit 1993. In ca. 30 Minuten vor Ort.') }}">
+    <title>{{ $settings->company_name ?? 'Elektriker Bergmann' }} — {{ __('Elektro-Notdienst Berlin') }}</title>
+    <meta name="description" content="{{ __('24/7 Elektro-Notdienst in Berlin — Meisterbetrieb seit 1993. In ca. 30 Minuten vor Ort.') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">

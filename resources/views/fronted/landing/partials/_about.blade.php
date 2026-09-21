@@ -11,7 +11,7 @@
             </div>
             <div>
                 <span class="lk-eyebrow">{{ $settings->about_eyebrow ?? __('Über uns') }}</span>
-                <h2 class="lk-h2">{{ $settings->about_heading ?? __('Ein Meisterbetrieb, dem Köln seit 1993 vertraut') }}</h2>
+                <h2 class="lk-h2">{{ $settings->about_heading ?? __('Ein Meisterbetrieb, dem Berlin seit 1993 vertraut') }}</h2>
                 <p style="color:var(--lk-gray-600);font-size:1.02rem;">{{ $settings->about_story ?? '' }}</p>
 
                 <div class="lk-trust-list">

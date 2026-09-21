@@ -3,7 +3,7 @@
         <div class="lk-footer-grid">
             <div>
                 <h4>{{ $settings->company_name ?? 'Elektriker Bergmann' }}</h4>
-                <p style="max-width:320px;">{{ $settings->footer_description ?? __('Elektro-Notdienst in Köln und Umgebung — Meisterbetrieb seit 1993.') }}</p>
+                <p style="max-width:320px;">{{ $settings->footer_description ?? __('Elektro-Notdienst in Berlin und Umgebung — Meisterbetrieb seit 1993.') }}</p>
                 @if($settings->certifications_text ?? null)
                     <p style="font-size:.85rem;">{{ $settings->certifications_text }}</p>
                 @endif

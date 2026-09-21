@@ -26,7 +26,7 @@ class LandingSeeder extends Seeder
             DB::table('landing_settings')->insert([
                 'alert_banner_active' => true,
                 'alert_banner_text' => $this->t(
-                    'Aktuell erhöhtes Anrufaufkommen in Köln — unser Notdienst-Team ist trotzdem in ca. 30 Minuten bei Ihnen.',
+                    'Aktuell erhöhtes Anrufaufkommen in Berlin — unser Notdienst-Team ist trotzdem in ca. 30 Minuten bei Ihnen.',
                     'Currently high call volume in Cologne — our emergency team still reaches you in about 30 minutes.',
                     'حاليًا هناك ضغط كبير على الاتصالات في كولونيا — لا يزال فريق الطوارئ لدينا يصل إليك خلال حوالي 30 دقيقة.'
                 ),
@@ -39,7 +39,7 @@ class LandingSeeder extends Seeder
                     'كهربائي بالقرب منك — نصل خلال 30 دقيقة'
                 ),
                 'hero_subheadline' => $this->t(
-                    'Elektro-Notdienst Köln — Meisterbetrieb seit 1993. Rund um die Uhr erreichbar, transparente Preise vor Arbeitsbeginn.',
+                    'Elektro-Notdienst Berlin — Meisterbetrieb seit 1993. Rund um die Uhr erreichbar, transparente Preise vor Arbeitsbeginn.',
                     'Emergency electrician service in Cologne — master craftsman business since 1993. Available around the clock, transparent pricing before work begins.',
                     'خدمة الطوارئ الكهربائية في كولونيا — شركة حرفية معتمدة منذ عام 1993. متاحون على مدار الساعة، وأسعار واضحة قبل بدء العمل.'
                 ),
@@ -50,7 +50,7 @@ class LandingSeeder extends Seeder
                 'about_owner_name' => 'Jörg Bergmann',
                 'about_owner_photo' => null,
                 'about_story' => $this->t(
-                    'Seit 1993 sorgt unser Meisterbetrieb in Köln und Umgebung für sichere Elektroinstallationen. Was als Ein-Mann-Betrieb begann, ist heute ein eingespieltes Team erfahrener Elektromeister und Gesellen — mit demselben Anspruch wie am ersten Tag: ehrliche Beratung, saubere Arbeit, faire Preise.',
+                    'Seit 1993 sorgt unser Meisterbetrieb in Berlin und Umgebung für sichere Elektroinstallationen. Was als Ein-Mann-Betrieb begann, ist heute ein eingespieltes Team erfahrener Elektromeister und Gesellen — mit demselben Anspruch wie am ersten Tag: ehrliche Beratung, saubere Arbeit, faire Preise.',
                     'Since 1993, our master craftsman business has kept homes in Cologne and the surrounding area electrically safe. What began as a one-man operation is now a well-coordinated team of experienced electrical master craftsmen and journeymen — with the same standard as on day one: honest advice, clean work, fair prices.',
                     'منذ عام 1993، تحرص شركتنا الحرفية على سلامة التمديدات الكهربائية في كولونيا والمناطق المحيطة بها. بدأنا كعمل فردي، وأصبحنا اليوم فريقًا متكاملًا من كهربائيين معتمدين ذوي خبرة — بنفس المعايير التي بدأنا بها: استشارة صادقة، عمل نظيف، وأسعار عادلة.'
                 ),
@@ -79,15 +79,15 @@ class LandingSeeder extends Seeder
                     'كل مهمة مغطاة بتأمين المسؤولية الخاص بشركتنا حتى 5 ملايين يورو.'
                 ),
                 'company_name' => $this->t('Elektriker Bergmann', 'Elektriker Bergmann', 'إلكتريكر بيرجمان'),
-                'company_address' => 'Musterstraße 12, 50667 Köln',
+                'company_address' => 'Musterstraße 12, 50667 Berlin',
                 'company_email' => 'info@elektriker-bergmann.de',
                 'certifications_text' => $this->t(
-                    'Meisterbetrieb der Elektro-Innung Köln · Mitglied der Handwerkskammer Köln',
+                    'Meisterbetrieb der Elektro-Innung Berlin · Mitglied der Handwerkskammer Berlin',
                     'Master craftsman member of the Cologne Electrical Guild · Member of the Cologne Chamber of Skilled Crafts',
                     'عضو نقابة الكهربائيين المعتمدين في كولونيا · عضو غرفة الحرف اليدوية في كولونيا'
                 ),
                 'footer_description' => $this->t(
-                    'Elektro-Notdienst in Köln und Umgebung — Meisterbetrieb seit 1993.',
+                    'Elektro-Notdienst in Berlin und Umgebung — Meisterbetrieb seit 1993.',
                     'Emergency electrician service in Cologne and the surrounding area — master craftsman business since 1993.',
                     'خدمة الطوارئ الكهربائية في كولونيا والمناطق المحيطة — شركة حرفية معتمدة منذ عام 1993.'
                 ),
@@ -104,7 +104,7 @@ class LandingSeeder extends Seeder
                 'hero_secondary_cta_label' => $this->t('Rückruf anfordern', 'Request a callback', 'اطلب معاودة الاتصال'),
                 'about_eyebrow' => $this->t('Über uns', 'About us', 'من نحن'),
                 'about_heading' => $this->t(
-                    'Ein Meisterbetrieb, dem Köln seit 1993 vertraut',
+                    'Ein Meisterbetrieb, dem Berlin seit 1993 vertraut',
                     'A master craftsman business Cologne has trusted since 1993',
                     'شركة حرفية تثق بها كولونيا منذ عام 1993'
                 ),
@@ -115,7 +115,7 @@ class LandingSeeder extends Seeder
                     'مهما حدث — نصل خلال حوالي 30 دقيقة'
                 ),
                 'services_subheading' => $this->t(
-                    'Die drei häufigsten Notfälle, mit denen uns unsere Kunden in Köln erreichen.',
+                    'Die drei häufigsten Notfälle, mit denen uns unsere Kunden in Berlin erreichen.',
                     'The three most common emergencies our customers in Cologne call us about.',
                     'أكثر ثلاث حالات طوارئ يتواصل بها عملاؤنا في كولونيا معنا.'
                 ),
@@ -319,7 +319,7 @@ class LandingSeeder extends Seeder
                 [
                     'question' => $this->t('Wie schnell seid ihr wirklich vor Ort?', 'How fast are you really on-site?', 'ما مدى سرعة وصولكم فعليًا؟'),
                     'answer' => $this->t(
-                        'Im Kölner Stadtgebiet erreichen wir Sie im Schnitt innerhalb von 30 Minuten — rund um die Uhr, auch nachts und am Wochenende.',
+                        'Im Berliner Stadtgebiet erreichen wir Sie im Schnitt innerhalb von 30 Minuten — rund um die Uhr, auch nachts und am Wochenende.',
                         'In the Cologne city area we typically reach you within 30 minutes — around the clock, including nights and weekends.',
                         'في منطقة كولونيا، نصل إليك عادةً خلال 30 دقيقة — على مدار الساعة، بما في ذلك الليل وعطلات نهاية الأسبوع.'
                     ),
